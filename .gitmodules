@@ -1,7 +1,7 @@
 
-[submodule "pkg/design"]
-	path = pkg/design
-	url = https://github.com/Nav1Cr0ss/s-design.git
-[submodule "pkg/lib"]
-	path = pkg/lib
+[submodule "pkg/s-lib"]
+	path = pkg/s-lib
 	url = https://github.com/Nav1Cr0ss/s-lib.git
+[submodule "pkg/s-design"]
+	path = pkg/s-design
+	url = https://github.com/Nav1Cr0ss/s-design.git
