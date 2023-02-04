@@ -2,6 +2,7 @@ package handler
 
 import (
 	"context"
+
 	"github.com/Nav1Cr0ss/s-auth/internal/api"
 )
 
@@ -11,7 +12,6 @@ func (h Handler) LoginPost(ctx context.Context, req api.OptLogin) (*api.Token, e
 	if err != nil {
 		return resp, err
 	}
-
 	token := api.Token{RefreshToken: user.Phone}
 	return &token, nil
 }
