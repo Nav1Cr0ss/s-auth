@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/Nav1Cr0ss/s-auth/internal/config"
-	"github.com/Nav1Cr0ss/s-auth/pkg/logger"
+	"github.com/Nav1Cr0ss/s-auth/config"
+	"github.com/Nav1Cr0ss/s-lib/logger"
 )
 
 type DataBase struct {

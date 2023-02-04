@@ -5,7 +5,7 @@ import (
 
 	oapi "github.com/Nav1Cr0ss/s-auth/internal/api"
 	"github.com/Nav1Cr0ss/s-auth/internal/app"
-	"github.com/Nav1Cr0ss/s-auth/pkg/logger"
+	"github.com/Nav1Cr0ss/s-lib/logger"
 )
 
 type Handler struct {
@@ -22,13 +22,13 @@ func NewHandler(log *logger.Logger, a app.Application) Handler {
 	return h
 }
 
-type Bearer struct {
+type Auth struct {
 }
 
-func NewBearer() *Bearer {
-	return &Bearer{}
+func NewAuth() *Auth {
+	return &Auth{}
 }
 
-func (b Bearer) HandleBearerAuth(ctx context.Context, operationName string, t oapi.BearerAuth) (context.Context, error) {
+func (b Auth) HandleBearerAuth(ctx context.Context, operationName string, t oapi.BearerAuth) (context.Context, error) {
 	return ctx, nil
 }

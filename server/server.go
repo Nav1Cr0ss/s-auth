@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/Nav1Cr0ss/s-auth/config"
 	"github.com/Nav1Cr0ss/s-auth/internal/api"
-	"github.com/Nav1Cr0ss/s-auth/internal/config"
 )
 
 func StartServer(srv *api.Server, cfg *config.Config) {

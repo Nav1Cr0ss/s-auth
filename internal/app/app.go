@@ -2,7 +2,7 @@ package app
 
 import (
 	repository "github.com/Nav1Cr0ss/s-auth/internal/adapters/repository/sqlc"
-	"github.com/Nav1Cr0ss/s-auth/pkg/logger"
+	"github.com/Nav1Cr0ss/s-lib/logger"
 )
 
 type Application struct {

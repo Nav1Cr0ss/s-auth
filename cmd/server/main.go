@@ -1,12 +1,13 @@
 package main
 
 import (
+	"github.com/Nav1Cr0ss/s-auth/config"
 	db "github.com/Nav1Cr0ss/s-auth/internal/adapters/repository"
 	repository "github.com/Nav1Cr0ss/s-auth/internal/adapters/repository/sqlc"
 	oapi "github.com/Nav1Cr0ss/s-auth/internal/api"
 	"github.com/Nav1Cr0ss/s-auth/internal/app"
-	"github.com/Nav1Cr0ss/s-auth/internal/config"
 	handler "github.com/Nav1Cr0ss/s-auth/internal/ports/http"
+	"github.com/Nav1Cr0ss/s-lib/logger"
 	_ "github.com/lib/pq"
 	"go.uber.org/fx"
 )
@@ -33,7 +34,7 @@ func main() {
 				fx.As(new(oapi.Handler)),
 			),
 			fx.Annotate(
-				handler.NewBearer,
+				handler.NewAuth,
 				fx.As(new(oapi.SecurityHandler)),
 			),
 			//handler.NewHandler,

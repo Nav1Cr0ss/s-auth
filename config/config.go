@@ -1,6 +1,7 @@
 package config
 
 import (
+	"log"
 	"os"
 	"time"
 
@@ -42,6 +43,7 @@ func NewConfiguration(prefixes ...string) (c *Config, err error) {
 
 	if err = envconfig.Process(prefix, c); err != nil {
 		_ = envconfig.Usage(prefix, c)
+		log.Fatal("failed on parse configs")
 		return
 	}
 
