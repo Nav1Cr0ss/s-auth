@@ -7,6 +7,7 @@ import (
 	oapi "github.com/Nav1Cr0ss/s-auth/internal/api"
 	"github.com/Nav1Cr0ss/s-auth/internal/app"
 	handler "github.com/Nav1Cr0ss/s-auth/internal/ports/http"
+	"github.com/Nav1Cr0ss/s-auth/server"
 	"github.com/Nav1Cr0ss/s-lib/logger"
 	_ "github.com/lib/pq"
 	"go.uber.org/fx"
@@ -41,7 +42,7 @@ func main() {
 			oapi.NewServer,
 		),
 		fx.Invoke(
-			handler.StartServer,
+			server.StartServer,
 		),
 	).Run()
 }
